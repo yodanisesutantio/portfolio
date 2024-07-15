@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Swiper CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Dosis:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="./favicon_io/favicon.ico">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        jump: '1s ease-in-out',
+                        duck: '1s ease-in-out',
+                        beats: '1s ease-in-out',
+                    },
+                    gridTemplateRows: {
+                        // 24 grid row
+                        '24': 'repeat(24, minmax(0, 1fr))',
+
+                        // Complex site-specific row configuration
+                        'layout': '200px minmax(900px, 1fr) 100px',
+                    },
+                    gridRow: {
+                        'span-19': 'span 19 / span 19',
+                        'span-21': 'span 21 / span 21',
+                    },
+                    keyframes: {
+                        jump: {
+                        '0%, 100%': { transform: 'translateY(0)' },
+                        '50%': { transform: 'translateY(-0.7rem)' }, 
+                        },
+                        duck: {
+                        '0%, 100%': { transform: 'translateY(0)' },
+                        '50%': { transform: 'translateY(0.7rem)' }, 
+                        },
+                        beats: {
+                        '0%, 100%': { transform: 'scale(1)' },
+                        '50%': { transform: 'scale(1.05)' }, 
+                        },
+                    },
+                    fontFamily: {
+                        'aclonica': ['Aclonica', 'serif'],
+                        'dosis': ['Dosis', 'sans-serif'],
+                    },
+                    rotate: {
+                        '135': '135deg',
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        @media (min-width: 1080px) {
+            .custom-scrollbar {
+                scrollbar-width: none; /* Firefox */
+                -ms-overflow-style: none; /* Internet Explorer 10+ */
+            }
+    
+            .custom-scrollbar::-webkit-scrollbar {
+                display: none; /* WebKit (Safari, Chrome) */
+            }
+        }
+    </style>
+
+    <title>Yodanis E. Sutantio</title>
+</head>
+<body class="w-full h-screen" style="background-image: url('img/button-3.png')">
+    <!-- {{-- Phone Display --}} -->
+    <div class="bg-[#E6D6AB]/30 grid grid-cols-2 grid-rows-8 sm:grid-rows-12 xl:grid-rows-24 bg-center bg-cover gap-2 md:gap-4 lg:gap-5 xl:gap-4 2xl:gap-5 w-full h-full p-5 md:p-7 lg:py-7 lg:px-24 xl:pt-10 xl:pb-6 xl:px-40 2xl:pt-16 2xl:pb-8 2xl:px-72">
+        <!-- {{-- Swiper Content --}} -->
+        <div class="col-span-2 row-span-7 sm:row-span-10 md:row-span-11 lg:row-span-10 xl:row-span-21 rounded bg-center md:bg-cover" style="background-image: url('img/button.jpeg')">
+            <div class="swiper bg-[#BBA356]/35 w-full h-full rounded shadow-[inset_0_0_5px_5px_rgba(68,31,19,0.1)]">
+                <div class="swiper-wrapper">
+                    <!-- {{-- First Slide --}} -->
+                    <div class="swiper-slide p-4 md:py-8 md:px-6 xl:px-32 2xl:py-14 2xl:px-48 flex flex-col overflow-y-auto text-[#441F12] custom-scrollbar">
+                        <h1 class="font-aclonica font-bold text-3xl md:text-4xl 2xl:text-5xl text-center">WANTED!</h1>
+                        <h2 class="py-3 2xl:py-4 font-aclonica font-semibold text-2xl md:text-3xl 2xl:text-4xl text-center">Wizards of Design and Web Dev</h2>
+                        <!-- {{-- Image Border --}} -->
+                        <div class="flex flex-col items-center bg-center bg-contain rounded bg-[#E6B98B] border-2 lg:border-0 border-[#441F12] w-40 md:w-56 lg:w-48 2xl:w-48 pt-3 mt-2 2xl:mt-7 2xl:mb-12 mx-auto" style="background-image: url('img/col-row-span.png')">
+                            <!-- {{-- Profile Picture --}} -->
+                            <img src="img/photo.png" alt="yodanis.png" class="h-48 md:h-56 lg:h-52 2xl:h-56">
+                        </div>
+                        <!-- {{-- Brief Description --}} -->
+                        <p class="font-dosis font-semibold text-lg xl:text-xl 2xl:text-2xl text-justify mt-5">
+                            Caution! <strong>Yodanis E. Sutantio</strong>, a digital sorcerer at large. This elusive designer conjures captivating UX and wields powerful front-end magic. Armed with logo design skills and pursuing full-stack mastery, Yodanis blends creativity and code seamlessly. Beware their relentless pursuit of web development wisdom!
+                        </p>
+                        <!-- {{-- Suggested to slide --}} -->
+                        <p class="font-dosis font-semibold text-lg xl:text-xl 2xl:text-2xl text-justify mt-5">
+                            <strong>WARNING:</strong> Proceed at your own risk! Yodanis' mystical projects may cause severe awe and potential career envy. Swipe right if you dare!
+                        </p>
+                    </div>
+
+                    <!-- {{-- Second Slide --}} -->
+                    <div class="swiper-slide p-4 md:py-8 md:px-6 xl:px-32 2xl:py-14 2xl:px-48 flex flex-col overflow-y-auto text-[#441F12] custom-scrollbar">
+                        <h2 class="py-3 2xl:py-4 font-aclonica font-semibold text-2xl md:text-3xl 2xl:text-4xl text-center">Archdaily UX Case Study</h2>
+                        <!-- {{-- Project Logos --}} -->
+                        <div class="flex flex-col items-center bg-center bg-contain rounded bg-[#E6B98B] p-3 md:p-4 w-40 md:w-48 2xl:w-60 pt-3 mt-2 2xl:mt-5 2xl:mb-10 mx-auto" style="background-image: url('img/col-row-span.png')">
+                            <img src="img/archdaily.png" alt="archdaily.png" class="w-full">
+                        </div>
+                        <!-- {{-- Brief Description --}} -->
+                        <p class="font-dosis font-semibold text-lg xl:text-xl 2xl:text-2xl text-justify mt-5">
+                            Yodanis' first craft was enhancing <a href="https://www.archdaily.com/" class="font-bold xl:font-extrabold underline hover:no-underline" target="_blank">Archdaily</a>, the world's largest architecture website. Despite its stellar UX, some user flows held hidden challenges. Our hero uncovered opportunities like adding search suggestions to improve navigation. Armed with design wisdom, Yodanis set out to conquer interface obstacles and forge more intuitive paths through the vast realms of architectural knowledge.
+                        </p>
+                        <!-- {{-- Link to Projects --}} -->
+                        <p class="font-dosis font-semibold text-lg xl:text-xl 2xl:text-2xl text-justify mt-5">
+                            Curious to unravel the full saga of this UX adventure? Venture forth to <a href="https://www.behance.net/gallery/181193573/UX-Case-Study-Archdaily" class="font-bold xl:font-extrabold underline hover:no-underline" target="_blank">explore the complete case study</a> and witness the transformation of Archdaily's digital landscape!
+                        </p>
+                    </div>
+
+                    <!-- {{-- Third Slide --}} -->
+                    <div class="swiper-slide p-4 md:py-8 md:px-6 xl:px-32 2xl:py-14 2xl:px-48 flex flex-col overflow-y-auto text-[#441F12] custom-scrollbar">
+                        <h2 class="py-3 2xl:py-4 font-aclonica font-semibold text-2xl md:text-3xl 2xl:text-4xl text-center">70Rad Design Challenge</h2>
+                        <!-- {{-- Project Logos --}} -->
+                        <div class="flex flex-col items-center bg-center bg-contain rounded bg-[#E6B98B] p-3 md:p-4 w-40 md:w-48 2xl:w-60 pt-3 mt-2 2xl:mt-5 2xl:mb-10 mx-auto" style="background-image: url('img/col-row-span.png')">
+                            <img src="img/70rad.png" alt="70Rad.png" class="w-full">
+                        </div>
+                        <!-- {{-- Brief Description --}} -->
+                        <p class="font-dosis font-semibold text-lg xl:text-xl 2xl:text-2xl text-justify mt-5">
+                            The <a href="https://www.radnolan.com/70rad" class="font-bold xl:font-extrabold underline hover:no-underline" target="_blank">70Rad Design Challenge</a>, a quest of digital craftsmanship, tested Yodanis' skills in two trials. First, he had to recreate an existing UI designs, then forged a complete user journey for a 10-day randomized project. From the misty realms of onboarding to the triumphant halls of task completion, Yodanis wove intuitive interfaces, honing the arts of UX sorcery and UI enchantment.
+                        </p>
+                        <!-- {{-- Link to Projects --}} -->
+                        <p class="font-dosis font-semibold text-lg xl:text-xl 2xl:text-2xl text-justify mt-5">
+                            Dare to delve deeper into the chronicles of this design odyssey? <a href="https://www.figma.com/design/aPp4xCfXp8K69D5Y5FH4JQ/RAD-Design-Challenge?node-id=515-507&t=QGqz3P3cwgCw7kO6-1" class="font-bold xl:font-extrabold underline hover:no-underline" target="_blank">Unveil the 70Rad masterpieces</a> and witness how Yodanis transformed challenges into captivating digital experiences!
+                        </p>
+                    </div>
+
+                    <!-- {{-- Fourth Slide --}} -->
+                    <div class="swiper-slide p-4 md:py-8 md:px-6 xl:px-32 2xl:py-14 2xl:px-48 flex flex-col overflow-y-auto text-[#441F12] custom-scrollbar">
+                        <h1 class="font-aclonica font-bold text-3xl md:text-4xl 2xl:text-5xl text-center">KEMUDI</h1>
+                        <h2 class="py-3 2xl:py-4 font-aclonica font-semibold text-2xl md:text-3xl 2xl:text-4xl text-center">A Web-Based Driving School App</h2>
+                        <!-- {{-- Project Logos --}} -->
+                        <div class="flex flex-col items-center bg-center bg-contain rounded bg-[#E6B98B] p-3 md:p-4 w-56 xl:w-60 2xl:w-72 pt-3 mt-2 2xl:mt-4 2xl:mb-8 mx-auto" style="background-image: url('img/col-row-span.png')">
+                            <img src="img/kemudi.png" alt="kemudi.png" class="w-full">
+                        </div>
+                        <!-- {{-- Brief Description --}} -->
+                        <p class="font-dosis font-semibold text-lg xl:text-xl 2xl:text-2xl text-justify mt-5">
+                            KEMUDI, Yodanis' current development endeavor, is a web app designed to connect students, instructors, and driving school admins. This innovative platform streamlines scheduling and facilitates communication between all parties. For driving schools, it offers a fresh avenue to promote their services. KEMUDI's user-friendly interface guides novice drivers on their journey to mastery, supported by experienced instructors in the challenging landscape of modern driving.
+                        </p>
+                        <!-- {{-- Link to Projects --}} -->
+                        <p class="font-dosis font-semibold text-lg xl:text-xl 2xl:text-2xl text-justify mt-5">
+                            No traveler in this realm has yet witnessed the full power of KEMUDI. As this mystical craft takes shape in the forges of development, keep your eyes peeled for whispers and rumors of its emergence. Should you catch a glimpse of KEMUDI in action, spread the word of its arrival!
+                        </p>
+                    </div>
+
+                    <!-- {{-- Fifth Slide --}} -->
+                    <div class="swiper-slide p-4 md:py-8 md:px-6 xl:px-32 2xl:py-14 2xl:px-48 flex flex-col overflow-y-auto text-[#441F12] custom-scrollbar">
+                        <h2 class="py-3 2xl:py-4 font-aclonica font-semibold text-2xl md:text-3xl 2xl:text-4xl text-center">ITATS Information System Official Logo</h2>
+                        <!-- {{-- Project Logos --}} -->
+                        <div class="flex flex-col items-center bg-center bg-contain rounded bg-[#E6B98B] p-3 md:p-4 w-40 md:w-44 2xl:w-52 pt-3 mt-2 2xl:mt-4 2xl:mb-9 mx-auto" style="background-image: url('img/col-row-span.png')">
+                            <img src="img/logoSI.png" alt="logoSIITATS.png" class="w-full">
+                        </div>
+                        <!-- {{-- Brief Description --}} -->
+                        <p class="font-dosis font-semibold text-lg xl:text-xl 2xl:text-2xl text-justify mt-5">
+                            Yodanis' creative vision emerged triumphant in a grand design tournament, forging the official emblem of <a href="https://is.itats.ac.id" class="font-bold xl:font-extrabold underline hover:no-underline" target="_blank">ITATS Information System</a>. This sigil captures the essence of digital wizardry and technological might, weaving together symbols of data streams and interconnected realms. The emblem's adoption proves that Yodanis' artistry resonates with and inspires all who behold it.
+                        </p>
+                        <!-- {{-- Link to Projects --}} -->
+                        <p class="font-dosis font-semibold text-lg xl:text-xl 2xl:text-2xl text-justify mt-5">
+                            For those curious about the arcane secrets behind this sigil, Yodanis has left ancient scrolls to guide you. Brave souls may <a href="https://drive.google.com/file/d/1tz0KK8V2QDBDk4G6YYfnRK68j08etKZX/view?usp=drive_link" class="font-bold xl:font-extrabold underline hover:no-underline" target="_blank">unravel the mysteries in the Visual Identity Guideline</a>, where the emblem's true power is revealed.
+                        </p>
+                    </div>
+
+                    <!-- {{-- Last Slide --}} -->
+                    <div class="swiper-slide p-4 md:py-8 md:px-6 xl:px-32 2xl:py-14 2xl:px-48 flex flex-col overflow-y-auto text-[#441F12] custom-scrollbar">
+                        <h1 class="font-aclonica font-bold text-3xl md:text-4xl 2xl:text-5xl text-center">Bounty Hunters!</h1>
+                        <h2 class="pt-3 2xl:pt-4 pb-2 2xl:pb-3 font-aclonica font-semibold text-xl md:text-2xl 2xl:text-3xl text-center">Seek the elusive designer's trail through these mystical portals!</h2>
+                        <div class="flex flex-col items-center gap-2 xl:gap-4 2xl:gap-6 my-6 xl:my-9 2xl:mt-9 2xl:mb-12">
+                            <!-- {{-- Resume --}} -->
+                            <a href="resume/ATS-en.pdf" class="w-40 p-3 rounded" target="_blank" rel="noopener noreferrer" aria-label="View Resume (opens PDF in new tab)">
+                                <p class="font-dosis font-bold xl:font-extrabold text-[#441F12] text-[22px] xl:text-2xl 2xl:text-3xl text-center underline hover:no-underline">Resume</p>
+                            </a>
+
+                            <!-- {{-- GitHub --}} -->
+                            <a href="https://github.com/yodanisesutantio" class="w-40 p-3 rounded" target="_blank" aria-label="Yodanis' GitHub">
+                                <p class="font-dosis font-medium text-[#441F12] text-[22px] xl:text-2xl 2xl:text-3xl text-center underline hover:no-underline">GitHub</p>
+                            </a>
+
+                            <!-- {{-- LinkedIn --}} -->
+                            <a href="https://www.linkedin.com/in/yodanis-e-sutantio/" class="w-40 p-3 rounded" target="_blank" aria-label="Yodanis' LinkedIn">
+                                <p class="font-dosis font-medium text-[#441F12] text-[22px] xl:text-2xl 2xl:text-3xl text-center underline hover:no-underline">LinkedIn</p>
+                            </a>
+
+                            <!-- {{-- Behance --}} -->
+                            <a href="https://www.behance.net/yodanis-e-sutantio" class="w-40 p-3 rounded" target="_blank" aria-label="Yodanis' Behance">
+                                <p class="font-dosis font-medium text-[#441F12] text-[22px] xl:text-2xl 2xl:text-3xl text-center underline hover:no-underline">Behance</p>
+                            </a>
+
+                            <!-- {{-- Instagram --}} -->
+                            <a href="https://www.instagram.com/yodanise.sutantio/" class="w-40 p-3 rounded" target="_blank" aria-label="Yodanis' Instagram">
+                                <p class="font-dosis font-medium text-[#441F12] text-[22px] xl:text-2xl 2xl:text-3xl text-center underline hover:no-underline">Instagram</p>
+                            </a>
+                        </div>
+                        <p class="font-dosis font-semibold text-[#441F12] text-lg xl:text-xl 2xl:text-2xl text-justify">Hey there! Thanks for sticking around through all that fantasy talk. It's just a fun gimmick I use to spice things up. In reality, I'm just a regular designer who loves what they do. Fancy a chat about design, tech, or maybe even some Lord of the Rings? Hit me up through any of these links!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- {{-- Prev Button --}} -->
+        <div class="rounded bg-center sm:row-span-2 md:row-span-1 lg:row-span-2 xl:row-span-3" style="background-image: url('img/button.jpeg')">
+            <button class="swiper-prev bg-[#BBA356]/40 flex flex-row items-center justify-center font-dosis font-bold text-base text-[#441F12] w-full h-full rounded shadow-[inset_0_0_5px_5px_rgba(68,31,19,0.15)]">
+                <p class="text-xl lg:text-2xl 2xl:text-3xl">Previous</p>
+            </button>
+        </div>
+        <!-- {{-- Next Button --}} -->
+        <div class="rounded bg-center sm:row-span-2 md:row-span-1 lg:row-span-2 xl:row-span-3" style="background-image: url('img/button.jpeg')">
+            <button class="swiper-next bg-[#BBA356]/40 flex flex-row items-center justify-center font-dosis font-bold text-base text-[#441F12] w-full h-full rounded shadow-[inset_0_0_5px_5px_rgba(68,31,19,0.15)]">
+                <p class="text-xl lg:text-2xl 2xl:text-3xl">Next</p>
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var swiper = new Swiper('.swiper', {
+                // Optional parameters
+                direction: 'horizontal',
+                loop: false,
+
+                // Disable buttons based on slide position
+                on: {
+                    slideChange: function () {
+                        const prevButton = document.querySelector('.swiper-prev');
+                        const nextButton = document.querySelector('.swiper-next');
+                        const prevText = prevButton.querySelector('p');
+                        const nextText = nextButton.querySelector('p');
+
+                        // First slide
+                        if (this.isBeginning) {
+                            prevButton.disabled = true;
+                            prevText.classList.add('text-[#441F12]/20');
+                        } else {
+                            prevButton.disabled = false;
+                            prevText.classList.remove('text-[#441F12]/20');
+                        }
+
+                        // Last slide
+                        if (this.isEnd) {
+                            nextButton.disabled = true;
+                            nextText.classList.add('text-[#441F12]/20');
+                        } else {
+                            nextButton.disabled = false;
+                            nextText.classList.remove('text-[#441F12]/20');
+                        }
+                    },
+                    init: function () {
+                        if (this.isBeginning) {
+                            document.querySelector('.swiper-prev').disabled = true;
+                            document.querySelector('.swiper-prev p').classList.add('text-[#441F12]/20');
+                        }
+                        if (this.isEnd) {
+                            document.querySelector('.swiper-next').disabled = true;
+                            document.querySelector('.swiper-next p').classList.add('text-[#441F12]/20');
+                        }
+                    }
+                },
+
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.swiper-next',
+                    prevEl: '.swiper-prev',
+                },
+            });
+        });
+    </script>
+</body>
+</html>
