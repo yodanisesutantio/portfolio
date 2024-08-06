@@ -78,14 +78,17 @@
 </head>
 <body class="w-full h-screen" style="background-image: url('img/button-3.png')">
     <!-- Desktop GIF Animation -->
-    <div class="w-full h-full hidden relative">
+    <div class="w-full h-full hidden relative lg:block">
         <img src="./img/yodanis_e_sutantio_portfolio.gif" alt="A Night Inside of a Treehouse with Sleeping Bag and Camping Basket" class="w-full h-full object-cover object-center">
         <!-- Darken Overlay Wrapper -->
-        <div class="absolute top-0 left-0 z-20 w-full h-full py-16 px-48 flex flex-row items-center justify-center">
+        <div class="absolute top-0 left-0 z-20 w-full h-full py-16 px-48 flex flex-row items-center justify-center darken-overlay-wrapper">
             <!-- Darken Overlay -->
-            <div class="flex flex-col justify-center items-center bg-[#000]/30 border border-[#AAA]/25 backdrop-blur-sm rounded-xl w-full h-full">
-                <h1 class="font-aclonica text-center text-4xl text-[#FCDFCD]">Welcome to the Sanctuary!</h1>
-                <h2 class="font-dosis text-center font-light text-xl text-[#FCDFCD] px-36 mt-4">Yodanis, our digital sorcerer, once sought refuge here. Legends speak of 4 artefacts hidden within these walls. Those 4 artefacts are</h2>
+            <div class="flex flex-col justify-between items-center bg-[#000]/30 border border-[#AAA]/25 backdrop-blur-sm rounded-xl w-full h-full pt-32 pb-8">
+                <div class="flex flex-col gap-4 px-36">
+                    <h1 class="font-aclonica text-center text-4xl text-[#FCDFCD]">Welcome to the Sanctuary!</h1>
+                    <h2 class="font-dosis text-center font-light text-xl text-[#FCDFCD]">Yodanis, our digital sorcerer, once sought refuge here. Legends speak of 4 artefacts hidden within these walls. Those 4 artefacts are</h2>
+                </div>
+                <button type="button" class="start-button font-dosis font-semibold underline hover:no-underline text-center text-2xl text-[#FCDFCD]">Let's Go Find Them!</button>
             </div>
         </div>
     </div>
@@ -236,6 +239,21 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            const overlay = document.querySelector('.darken-overlay-wrapper');
+            const button = document.querySelector('.start-button');
+
+            button.addEventListener('click', () => {
+                let opacity = 1;
+                const intervalId = setInterval(() => {
+                    opacity -= 0.05;
+                    overlay.style.opacity = opacity;
+                    if (opacity <= 0) {
+                    clearInterval(intervalId);
+                    overlay.style.display = 'none';
+                    }
+                }, 20);
+            });
+
             var swiper = new Swiper('.swiper', {
                 // Optional parameters
                 direction: 'horizontal',
