@@ -62,6 +62,19 @@
     </script>
 
     <style>
+        .darken-overlay {
+            animation: blur-in 1000ms 2s forwards;
+        }
+
+        @keyframes blur-in {
+            from {
+                backdrop-filter: blur(0px);
+            }
+            to {
+                backdrop-filter: blur(4px);
+            }
+        }
+
         @media (min-width: 1080px) {
             .custom-scrollbar {
                 scrollbar-width: none; /* Firefox */
@@ -81,9 +94,9 @@
     <div class="w-full h-full hidden relative lg:block">
         <img src="./img/newBG.gif" alt="Medieval magic toolsmith workshop" class="w-full h-full object-cover object-center">
         <!-- Darken Overlay Wrapper -->
-        <div class="absolute top-0 left-0 z-20 w-full h-full py-16 px-48 flex flex-row items-center justify-center darken-overlay-wrapper">
+        <div class="absolute top-0 left-0 z-20 opacity-0 w-full h-full py-16 px-48 flex flex-row items-center justify-center darken-overlay-wrapper">
             <!-- Darken Overlay -->
-            <div class="flex flex-col justify-between items-center bg-[#000]/40 border border-[#AAA]/25 backdrop-blur rounded-xl w-full h-full darken-overlay">
+            <div class="flex flex-col justify-between items-center bg-[#000]/40 border border-[#AAA]/25 backdrop-blur-none rounded-xl w-full h-full darken-overlay">
                 <div class="flex flex-col gap-4 px-36 mt-24">
                     <h1 class="font-aclonica text-center text-4xl text-[#FCDFCD]">Welcome to the Sanctuary!</h1>
                     <h2 class="font-dosis text-center font-light text-xl text-[#FCDFCD]">Yodanis, our digital sorcerer, once sought refuge here. Legends speak of 4 artefacts hidden within these walls. Those 4 artefacts are:</h2>
@@ -240,29 +253,26 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const overlayWrapper = document.querySelector('.darken-overlay-wrapper');
-            const overlay = document.querySelector('.darken-overlay');
             const button = document.querySelector('.start-button');
 
-            overlayWrapper.style.opacity = '0'; // Initially hide the overlayWrapper
-            overlay.style.backdropFilter = 'blur(0px)'; // Initial blur value
-            setTimeout(() => {
-                overlayWrapper.style.opacity = '1'; // Fade in over 0.5 seconds
-                overlay.style.backdropFilter = 'blur(12px)';
-                
-                overlayWrapper.style.transition = 'opacity 0.8s ease-in-out';
-                overlay.style.transition = 'backdrop-filter 0.8s ease-in-out';
-            }, 1500); // Delay for 1.5 seconds
+            // Set initial state
+            overlayWrapper.style.opacity = '0';
 
+            // Fade in the overlay and apply blur after a delay
+            setTimeout(() => {
+                overlayWrapper.style.transition = 'opacity 0.8s ease-in-out';
+                overlayWrapper.style.opacity = '1';
+            }, 1500);
+
+            // Add click event listener to the button
             button.addEventListener('click', () => {
-                let opacity = 1;
-                const intervalId = setInterval(() => {
-                    opacity -= 0.05;
-                    overlayWrapper.style.opacity = opacity;
-                    if (opacity <= 0) {
-                    clearInterval(intervalId);
+                overlayWrapper.style.transition = 'opacity 0.8s ease-in-out';                
+                overlayWrapper.style.opacity = '0'; // Start the fade out
+
+                // Hide the overlayWrapper after both transitions end
+                overlayWrapper.addEventListener('transitionend', () => {
                     overlayWrapper.style.display = 'none';
-                    }
-                }, 20);
+                }, { once: true });
             });
 
             var swiper = new Swiper('.swiper', {
