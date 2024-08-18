@@ -94,42 +94,46 @@
     <div class="w-full h-full hidden relative lg:block">
         <img src="./img/newGIF_2.gif" alt="Leonardo Phoenix A sprawling intricate rough color pencil" class="w-full h-full object-cover object-center">
         <!-- Darken Overlay Wrapper -->
-        <div class="absolute top-0 left-0 z-20 opacity-0 w-full h-full py-16 px-48 flex flex-row items-center justify-center darken-overlay-wrapper">
+        <div class="absolute hidden top-0 left-0 z-20 opacity-0 w-full h-full py-16 px-48 flex flex-row items-center justify-center darken-overlay-wrapper">
             <!-- Darken Overlay -->
             <div class="flex flex-col justify-between items-center bg-[#000]/55 border border-[#AAA]/25 backdrop-blur-none rounded-xl w-full h-full darken-overlay">
-                <div class="flex flex-col gap-4 px-36 mt-24">
+                <div class="flex flex-col gap-4 px-36 mt-20">
                     <h1 class="font-aclonica text-center text-4xl text-[#FCDFCD]">Welcome to the Sanctuary!</h1>
-                    <h2 class="font-dosis text-center font-light text-xl text-[#FCDFCD]">Yodanis, our digital sorcerer, said to sought refuge here. Legends speak of 4 artefacts hidden within these walls. Those 4 artefacts are:</h2>
+                    <h2 class="font-dosis text-center font-light text-xl text-[#FCDFCD]">Yodanis, our digital sorcerer, said to sought refuge here. Legends speak of 4 powerful artefacts hidden within these walls. Those 4 artefacts are:</h2>
                 </div>
 
                 <!-- The Hidden Items, kinda -->
-                <div class="flex flex-row justify-between my-12 px-12">
+                <div class="flex flex-row w-full justify-between items-end px-12">
                     <!-- SI Logo -->
                     <div class="flex flex-col gap-2">
-                        <img src="./img/silhouette_logo-si-itats-map.png" alt="ancient map silhouette" class="opacity-25 h-24 aspect-auto">
-                        <p class="font-dosis text-center text-lg text-[#FCDFCD]">an Ancient Map</p>
-                    </div>
-                    <!-- Archdaily -->
-                    <div class="flex flex-col gap-2">
-                        <img src="./img/silhouette_archdaily-books.png" alt="grimoire of forgotten spells" class="opacity-25 h-24 aspect-auto">
-                        <p class="font-dosis text-center text-lg text-[#FCDFCD]">a Grimoire</p>
+                        <img src="./img/silhouette_logo-si-itats-map.png" alt="ancient map silhouette" class="opacity-35 brightness-75 h-20 aspect-auto flex-shrink-0">
+                        <p class="font-dosis text-center text-xl text-[#FCDFCD]">an Ancient Map</p>
                     </div>
                     <!-- KEMUDI -->
                     <div class="flex flex-col gap-2">
-                        <img src="./img/silhouette_kemudi-cauldron.png" alt="arcane potion cauldron" class="opacity-25 h-24 aspect-auto">
-                        <p class="font-dosis text-center text-lg text-[#FCDFCD]">a Potion Cauldron</p>
+                        <img src="./img/silhouette_kemudi-cauldron.png" alt="arcane potion cauldron" class="opacity-35 brightness-75 h-32 aspect-auto flex-shrink-0">
+                        <p class="font-dosis text-center text-xl text-[#FCDFCD]">a Potion Cauldron</p>
                     </div>
                     <!-- Design Challenge -->
                     <div class="flex flex-col gap-2">
-                        <img src="./img/silhouette_rad-design-challenge-magic-wand.png" alt="an oak wood wand" class="opacity-25 h-24 aspect-auto">
-                        <p class="font-dosis text-center text-lg text-[#FCDFCD]">an Oak Wand</p>
+                        <img src="./img/silhouette_rad-design-challenge-magic-wand.png" alt="an oak wood wand" class="opacity-35 brightness-75 h-16 aspect-auto flex-shrink-0">
+                        <p class="font-dosis text-center text-xl text-[#FCDFCD]">an Oak Wand</p>
+                    </div>
+                    <!-- Archdaily -->
+                    <div class="flex flex-col gap-2">
+                        <img src="./img/silhouette_archdaily-books.png" alt="grimoire of forgotten spells" class="opacity-35 brightness-75 h-[5.5rem] aspect-auto flex-shrink-0">
+                        <p class="font-dosis text-center text-xl text-[#FCDFCD]">a Grimoire</p>
                     </div>
                 </div>
                 
                 <button type="button" class="start-button font-dosis font-semibold underline hover:no-underline text-center text-2xl text-[#FCDFCD] mb-8">Let's Go Find Them!</button>
             </div>
         </div>
+
+        <!-- Hidden Map to Open SI Logo Overlay -->
+        <button id="openSDA" class="absolute top-[1.7rem] left-[40rem] opacity-25 w-[4rem] h-[7rem] bg-[#f00]"></button>
     </div>
+
     <!-- Phone Display -->
     <div class="lg:hidden bg-[#E6D6AB]/30 grid grid-cols-2 grid-rows-8 sm:grid-rows-12 xl:grid-rows-24 bg-center bg-cover gap-2 md:gap-4 lg:gap-5 xl:gap-4 2xl:gap-5 w-full h-full p-5 md:p-7 lg:py-7 lg:px-24 xl:pt-10 xl:pb-6 xl:px-40 2xl:pt-16 2xl:pb-8 2xl:px-72">
         <!-- Swiper Content -->
