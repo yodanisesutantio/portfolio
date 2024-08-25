@@ -100,41 +100,47 @@
         </svg>
 
         <!-- Darken Overlay Wrapper -->
-        <div class="absolute top-0 left-0 z-20 opacity-0 w-full h-full py-16 px-48 flex flex-row items-center justify-center darken-overlay-wrapper">
+        <div class="absolute top-0 left-0 z-20 opacity-0 w-full h-full flex flex-row items-center justify-center darken-overlay-wrapper">
             <!-- Darken Overlay -->
-            <div class="flex flex-col gap-6 justify-between items-center bg-[#000]/55 border border-[#AAA]/25 backdrop-blur-none rounded-xl w-full h-full overflow-y-auto darken-overlay">
-                <div class="flex flex-col gap-4 px-36 mt-20">
-                    <h1 class="font-aclonica text-center text-4xl text-[#FCDFCD]">Welcome to the Sanctuary!</h1>
-                    <h2 class="font-dosis text-center font-light text-xl text-[#FCDFCD]">Yodanis, our digital sorcerer, said to sought refuge here. Legends speak of 4 powerful artefacts hidden within these walls. Those 4 artefacts are:</h2>
+            <div class="flex flex-col gap-6 justify-between items-center bg-[#000]/55 border border-[#AAA]/25 backdrop-blur-none rounded-xl w-[70%] h-[80%] pt-[4%] pb-[2%] overflow-y-auto darken-overlay">
+                <div class="flex flex-col gap-4 px-36">
+                    <h1 class="font-aclonica text-center lg:text-2xl xl:text-4xl 2xl:text-[42px] text-[#FCDFCD]">Welcome to the Sanctuary!</h1>
+                    <h2 class="font-dosis text-center font-light lg:text-base xl:text-xl 2xl:text-2xl text-[#FCDFCD]">Yodanis, our digital sorcerer, said to sought refuge here. Legends speak of 4 powerful artefacts hidden within these walls. Those 4 artefacts are:</h2>
                 </div>
 
                 <!-- The Hidden Items, kinda -->
                 <div class="flex flex-row w-full justify-between items-end px-12">
                     <!-- SI Logo -->
                     <div class="flex flex-col gap-2">
-                        <img src="./img/silhouette_logo-si-itats-map.png" alt="ancient map silhouette" class="opacity-35 brightness-75 h-20 aspect-auto flex-shrink-0">
-                        <p class="font-dosis text-center text-xl text-[#FCDFCD]">an Ancient Map</p>
+                        <img src="./img/silhouette_logo-si-itats-map.png" alt="ancient map silhouette" class="opacity-45 brightness-75 lg:h-16 xl:h-20 2xl:h-24 aspect-auto flex-shrink-0">
+                        <p class="font-dosis text-center lg:text-base xl:text-xl 2xl:text-2xl text-[#FCDFCD]">an Ancient Map</p>
                     </div>
                     <!-- KEMUDI -->
                     <div class="flex flex-col gap-2">
-                        <img src="./img/silhouette_kemudi-cauldron.png" alt="arcane potion cauldron" class="opacity-35 brightness-75 h-32 aspect-auto flex-shrink-0">
-                        <p class="font-dosis text-center text-xl text-[#FCDFCD]">a Potion Cauldron</p>
+                        <img src="./img/silhouette_kemudi-cauldron.png" alt="arcane potion cauldron" class="opacity-45 brightness-75 lg:h-24 xl:h-32 2xl:h-36 aspect-auto flex-shrink-0">
+                        <p class="font-dosis text-center lg:text-base xl:text-xl 2xl:text-2xl text-[#FCDFCD]">a Potion Cauldron</p>
                     </div>
                     <!-- Design Challenge -->
                     <div class="flex flex-col gap-2">
-                        <img src="./img/silhouette_rad-design-challenge-magic-wand.png" alt="an oak wood wand" class="opacity-35 brightness-75 h-16 aspect-auto flex-shrink-0">
-                        <p class="font-dosis text-center text-xl text-[#FCDFCD]">an Oak Wand</p>
+                        <img src="./img/silhouette_rad-design-challenge-magic-wand.png" alt="an oak wood wand" class="opacity-45 brightness-75 lg:h-12 xl:h-16 2xl:h-20 aspect-auto flex-shrink-0">
+                        <p class="font-dosis text-center lg:text-base xl:text-xl 2xl:text-2xl text-[#FCDFCD]">an Oak Wand</p>
                     </div>
                     <!-- Archdaily -->
                     <div class="flex flex-col gap-2">
-                        <img src="./img/silhouette_archdaily-books.png" alt="grimoire of forgotten spells" class="opacity-35 brightness-75 h-[5.5rem] aspect-auto flex-shrink-0">
-                        <p class="font-dosis text-center text-xl text-[#FCDFCD]">a Grimoire</p>
+                        <img src="./img/silhouette_archdaily-books.png" alt="grimoire of forgotten spells" class="opacity-45 brightness-75 lg:h-16 xl:h-[5.5rem] 2xl:h-24 aspect-auto flex-shrink-0">
+                        <p class="font-dosis text-center lg:text-base xl:text-xl 2xl:text-2xl text-[#FCDFCD]">a Grimoire</p>
                     </div>
                 </div>
                 
-                <button type="button" class="start-button font-dosis font-semibold underline hover:no-underline text-center text-2xl text-[#FCDFCD] mb-8">Let's Go Find Them!</button>
+                <button type="button" class="start-button font-dosis font-semibold underline hover:no-underline text-center lg:text-xl xl:text-2xl 2xl:text-3xl text-[#FCDFCD]">Let's Go Find Them!</button>
             </div>
         </div>
+
+        <!-- Reopen the Missing Items Dialog Box -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" class="cursor-pointer absolute bottom-7 right-7 hidden helpSVG" viewBox="0 0 32 32"><path fill="#BBA356" d="M16 2a14 14 0 1 0 14 14A14 14 0 0 0 16 2m0 23a1.5 1.5 0 1 1 1.5-1.5A1.5 1.5 0 0 1 16 25m1.142-7.754v2.501h-2.25V15h2.125a2.376 2.376 0 0 0 0-4.753h-1.5a2.38 2.38 0 0 0-2.375 2.375v.638h-2.25v-.638A4.63 4.63 0 0 1 15.517 8h1.5a4.624 4.624 0 0 1 .125 9.246"/><path fill="none" d="M16 25a1.5 1.5 0 1 1 1.5-1.5A1.5 1.5 0 0 1 16 25m1.142-7.754v2.501h-2.25V15h2.125a2.376 2.376 0 0 0 0-4.753h-1.5a2.38 2.38 0 0 0-2.375 2.375v.638h-2.25v-.638A4.63 4.63 0 0 1 15.517 8h1.5a4.624 4.624 0 0 1 .125 9.246"/></svg>
+
+        <!-- This is for very Large Desktop -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" class="cursor-pointer absolute bottom-7 right-7 hidden helpSVGLarge" viewBox="0 0 32 32"><path fill="#BBA356" d="M16 2a14 14 0 1 0 14 14A14 14 0 0 0 16 2m0 23a1.5 1.5 0 1 1 1.5-1.5A1.5 1.5 0 0 1 16 25m1.142-7.754v2.501h-2.25V15h2.125a2.376 2.376 0 0 0 0-4.753h-1.5a2.38 2.38 0 0 0-2.375 2.375v.638h-2.25v-.638A4.63 4.63 0 0 1 15.517 8h1.5a4.624 4.624 0 0 1 .125 9.246"/><path fill="none" d="M16 25a1.5 1.5 0 1 1 1.5-1.5A1.5 1.5 0 0 1 16 25m1.142-7.754v2.501h-2.25V15h2.125a2.376 2.376 0 0 0 0-4.753h-1.5a2.38 2.38 0 0 0-2.375 2.375v.638h-2.25v-.638A4.63 4.63 0 0 1 15.517 8h1.5a4.624 4.624 0 0 1 .125 9.246"/></svg>
     </div>
 
     <!-- Phone Display -->
@@ -285,7 +291,9 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const overlayWrapper = document.querySelector('.darken-overlay-wrapper');
-            const button = document.querySelector('.start-button');
+            const startButton = document.querySelector('.start-button');
+            const helpSVG = document.querySelector('.helpSVG');
+            const helpSVGLarge = document.querySelector('.helpSVGLarge');
 
             // Set initial state
             overlayWrapper.style.opacity = '0';
@@ -297,7 +305,7 @@
             }, 1500);
 
             // Add click event listener to the button
-            button.addEventListener('click', () => {
+            startButton.addEventListener('click', () => {
                 overlayWrapper.style.transition = 'opacity 0.8s ease-in-out';                
                 overlayWrapper.style.opacity = '0'; // Start the fade out
 
@@ -305,6 +313,47 @@
                 overlayWrapper.addEventListener('transitionend', () => {
                     overlayWrapper.style.display = 'none';
                 }, { once: true });
+            });
+
+            // Add click event listener to the start button
+            startButton.addEventListener('click', function() {
+                // Fade out the overlay
+                overlayWrapper.style.transition = 'opacity 0.8s ease-in-out';                
+                overlayWrapper.style.opacity = '0';
+
+                // Once the fade-out transition ends, hide the overlay and show the SVG icons
+                overlayWrapper.addEventListener('transitionend', () => {
+                    overlayWrapper.style.display = 'none';
+
+                    // Show the SVG icons
+                    helpSVG.classList.remove('hidden');
+                    helpSVG.classList.add('block', '2xl:hidden');
+
+                    // This is the SVG for very large Desktop
+                    helpSVGLarge.classList.remove('hidden');
+                    helpSVGLarge.classList.add('hidden', '2xl:block');
+                }, { once: true });
+            });
+
+            // Add click event listener to SVG icons to show the overlay and hide the icons
+            [helpSVG, helpSVGLarge].forEach(function(svg) {
+                svg.addEventListener('click', function() {
+                    // Show the overlay
+                    overlayWrapper.style.display = 'flex'; // Ensure the overlay is visible again
+                    overlayWrapper.style.opacity = '0'; // Start with opacity 0 for the transition
+
+                    setTimeout(() => {
+                        overlayWrapper.style.opacity = '1';
+                    }, 10); // Small delay to ensure the transition is smooth
+
+                    // Hide the SVG icons
+                    helpSVG.classList.remove('block', '2xl:hidden');
+                    helpSVG.classList.add('hidden');
+
+                    // This is the SVG for very large Desktop
+                    helpSVGLarge.classList.remove('hidden', '2xl:block');
+                    helpSVGLarge.classList.add('hidden');
+                });
             });
 
             var swiper = new Swiper('.swiper', {
