@@ -62,7 +62,7 @@
     </script>
 
     <style>
-        .darken-overlay {
+        .darken-overlay,  .sbydev {
             animation: blur-in 1000ms 2s forwards;
         }
 
@@ -91,25 +91,25 @@
 </head>
 <body class="w-full h-screen" style="background-image: url('img/button-3.png')">
     <!-- Desktop GIF Animation -->
-    <div class="w-full h-full bg-cover bg-center relative hidden lg:block">
+    <div class="w-full h-full relative hidden lg:block">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1274 720" preserveAspectRatio="xMidYMid slice" class="w-full h-full">
             <image href="./img/newGIF_2.gif" x="0" y="0" width="100%" height="100%" />
 
             <!-- Hidden Buttons -->
-            <rect x="30%" y="20%" width="10%" height="10%" fill="transparent" stroke="red" />
+            <rect x="44.7%" y="2%" width="5.2%" height="18.5%" id="surabayaDevAdmission" class="cursor-pointer" fill="transparent" stroke="none" />
         </svg>
 
         <!-- Darken Overlay Wrapper -->
-        <div class="absolute top-0 left-0 z-20 opacity-0 w-full h-full flex flex-row items-center justify-center darken-overlay-wrapper">
+        <div class="absolute top-0 left-0 z-20 opacity-0 w-full h-full flex flex-row items-center justify-center custom-scrollbar darken-overlay-wrapper">
             <!-- Darken Overlay -->
             <div class="flex flex-col gap-6 justify-between items-center bg-[#000]/55 border border-[#AAA]/25 backdrop-blur-none rounded-xl w-[70%] h-[80%] pt-[4%] pb-[2%] overflow-y-auto darken-overlay">
-                <div class="flex flex-col gap-4 px-36">
+                <div class="flex flex-col gap-4 px-[16%]">
                     <h1 class="font-aclonica text-center lg:text-2xl xl:text-4xl 2xl:text-[42px] text-[#FCDFCD]">Welcome to the Sanctuary!</h1>
                     <h2 class="font-dosis text-center font-light lg:text-base xl:text-xl 2xl:text-2xl text-[#FCDFCD]">Yodanis, our digital sorcerer, said to sought refuge here. Legends speak of 4 powerful artefacts hidden within these walls. Those 4 artefacts are:</h2>
                 </div>
 
                 <!-- The Hidden Items, kinda -->
-                <div class="flex flex-row w-full justify-between items-end px-12">
+                <div class="flex flex-row w-full justify-between items-end px-[5.5%]">
                     <!-- SI Logo -->
                     <div class="flex flex-col gap-2">
                         <img src="./img/silhouette_logo-si-itats-map.png" alt="ancient map silhouette" class="opacity-45 brightness-75 lg:h-16 xl:h-20 2xl:h-24 aspect-auto flex-shrink-0">
@@ -141,6 +141,30 @@
 
         <!-- This is for very Large Desktop -->
         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" class="cursor-pointer absolute bottom-7 right-7 hidden helpSVGLarge" viewBox="0 0 32 32"><path fill="#BBA356" d="M16 2a14 14 0 1 0 14 14A14 14 0 0 0 16 2m0 23a1.5 1.5 0 1 1 1.5-1.5A1.5 1.5 0 0 1 16 25m1.142-7.754v2.501h-2.25V15h2.125a2.376 2.376 0 0 0 0-4.753h-1.5a2.38 2.38 0 0 0-2.375 2.375v.638h-2.25v-.638A4.63 4.63 0 0 1 15.517 8h1.5a4.624 4.624 0 0 1 .125 9.246"/><path fill="none" d="M16 25a1.5 1.5 0 1 1 1.5-1.5A1.5 1.5 0 0 1 16 25m1.142-7.754v2.501h-2.25V15h2.125a2.376 2.376 0 0 0 0-4.753h-1.5a2.38 2.38 0 0 0-2.375 2.375v.638h-2.25v-.638A4.63 4.63 0 0 1 15.517 8h1.5a4.624 4.624 0 0 1 .125 9.246"/></svg>
+
+        <!-- Surabaya Dev Overlay Wrapper -->
+        <div class="absolute hidden top-0 left-0 z-20 w-full h-full flex flex-row items-center justify-center sbydev-wrapper">
+            <!-- Surabaya Dev Overlay -->
+            <div class="flex flex-col gap-12 justify-between items-center bg-[#000]/55 border border-[#AAA]/25 backdrop-blur-none rounded-xl w-[70%] h-[80%] pt-[4%] pb-[2%] overflow-y-auto custom-scrollbar sbydev">
+                <div class="flex flex-col gap-12 px-[16%]">
+                    <h1 class="font-aclonica text-center lg:text-2xl xl:text-4xl 2xl:text-[42px] text-[#FCDFCD]">Witchfire Lantern Found!</h1>
+
+                    <!-- Narrative Description -->
+                    <div class="flex flex-col gap-3">
+                        <h2 class="font-dosis text-center font-light lg:text-base xl:text-xl 2xl:text-2xl text-[#FCDFCD]">You've noticed something unusual about the lantern, haven't you?  Its intricate metalwork suggests a skilled artisan's hand, while the flickering flame within hints at hidden magic.</h2>
+                        
+                        <h2 class="font-dosis text-center font-light lg:text-base xl:text-xl 2xl:text-2xl text-[#FCDFCD]">Legend has it that a powerful sorcerer once crafted this lantern, imbuing it with mystical properties. It is said that within its depths lies a secret, a message hidden for centuries.</h2>
+
+                        <h2 class="font-dosis text-center font-light lg:text-base xl:text-xl 2xl:text-2xl text-[#FCDFCD]">As you examine the lantern, you notice a small parchment tucked within its base. Would you interested to open the small parchment?</h2>
+                    </div>
+                </div>
+                
+                <div class="flex flex-row gap-20">
+                    <button type="button" class="closeDevAdmission font-dosis font-light no-underline hover:underline text-center lg:text-xl xl:text-2xl 2xl:text-3xl text-[#FCDFCD]">Later</button>
+                    <button type="button" class="openDevAdmission font-dosis font-semibold underline hover:no-underline text-center lg:text-xl xl:text-2xl 2xl:text-3xl text-[#FCDFCD]"><a href="./resume/surabaya-dev-admission.pdf" target="_blank">Open</a></button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Phone Display -->
@@ -335,6 +359,7 @@
                 }, { once: true });
             });
 
+
             // Add click event listener to SVG icons to show the overlay and hide the icons
             [helpSVG, helpSVGLarge].forEach(function(svg) {
                 svg.addEventListener('click', function() {
@@ -355,6 +380,40 @@
                     helpSVGLarge.classList.add('hidden');
                 });
             });
+
+
+
+            // This is for the surabayaDevAdmission
+            const sbyDevWrapper = document.querySelector('.sbydev-wrapper');
+            const openDevAdmissionButton = document.querySelector('#surabayaDevAdmission');
+            const closeDevAdmissionButton = document.querySelector('.closeDevAdmission');
+
+            // Set initial state
+            sbyDevWrapper.style.opacity = '0';
+
+            // Open the SurabayDev Admission Dialog Box
+            openDevAdmissionButton.addEventListener('click', () => {
+                sbyDevWrapper.style.display = 'flex'; // Ensure the overlay is visible again
+
+                setTimeout(() => {
+                    sbyDevWrapper.style.transition = 'opacity 0.8s ease-in-out';
+                    sbyDevWrapper.style.opacity = '1';
+                }, 100);
+            });
+
+            // Close the SurabayDev Admission Dialog Box
+            closeDevAdmissionButton.addEventListener('click', function() {
+                // Fade out the overlay
+                sbyDevWrapper.style.transition = 'opacity 0.8s ease-in-out';                
+                sbyDevWrapper.style.opacity = '0';
+
+                // Once the fade-out transition ends, hide the overlay and show the SVG icons
+                sbyDevWrapper.addEventListener('transitionend', () => {
+                    sbyDevWrapper.style.display = 'none';
+                }, { once: true });
+            });
+
+
 
             var swiper = new Swiper('.swiper', {
                 // Optional parameters
